@@ -1,0 +1,15 @@
+@import "../../styles/mq"
+
+.connect
+    margin: 10px
+
+    .icons
+        display: flex
+
+        @include mq($until: tablet, $media-type: screen)
+            display: block
+            text-align: center
+
+    @include mq($until: tablet)
+        text-align: center
+

@@ -1,0 +1,63 @@
+@import "../../styles/mq"
+@import "../../styles/colors"
+
+.nav
+
+    margin: 20px auto 0px auto
+    padding: 20px
+    text-align: center
+
+    .name
+        font-size: 22px
+        margin-right: 20px
+        margin-top: 5px
+
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        display: inline
+
+        li
+            display: inline
+
+            a
+                border: 1px solid $gray
+                padding: 5px
+                margin: 2px
+                border-radius: 5px
+                text-decoration: none
+                color: $font-color
+
+                &:hover
+                    color: $white
+                    background-color: $font-color
+                    border: 1px solid $font-color
+
+                @include mq($until: tablet)
+                    display: block
+                    width: 100px
+                    min-width: 100px
+
+        @include mq($until: tablet)
+            display: block
+            width: 115px
+            margin: 0 auto
+
+            li
+                display: block
+                text-align: center
+
+        @include mq($media-type: print)
+            display: none
+
+    @include mq($until: tablet)
+        .name
+            display: block
+            margin-right: 0
+            margin-bottom: 20px
+
+    @include mq($media-type: print)
+        padding-top: 0
+        margin-top: 0
+        margin-bottom: -30px

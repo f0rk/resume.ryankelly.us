@@ -1,0 +1,12 @@
+@import "../../styles/mq"
+
+.header
+    font-size: 22px
+    margin-right: 20px
+
+    @include mq($until: tablet)
+        text-align: center
+        margin-right: 0px
+
+    @include mq($media-type: print)
+        font-size: 18px

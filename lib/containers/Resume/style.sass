@@ -1,0 +1,22 @@
+@import "../../styles/mq"
+
+.resume
+    margin: 10px
+
+    ul
+        margin-left: 18px
+
+    .technologies
+        display: flex
+
+        min-width: 100%
+        display: block
+        clear: both
+
+        @include mq($until: tablet)
+            display: block
+
+        @include mq($media-type: print)
+            min-width: 100%
+            display: block
+            clear: both

@@ -1,0 +1,33 @@
+@import "../../../styles/mq"
+
+.resume
+    .technology
+
+        display: inline-block
+        vertical-align: top
+
+        &.languages
+            min-width: 15%
+
+        &.libraries
+            min-width: 15%
+
+        &.tools
+            min-width: 50%
+
+        @include mq($until: tablet, $media-type: screen)
+            display: block
+            width: 100%
+            max-width: 100%
+
+        margin: 10px
+
+        .type
+            display: block
+            font-size: 18px
+
+            @include mq($media-type: print)
+                font-size: 16px
+
+        ul
+            list-style-type: circle

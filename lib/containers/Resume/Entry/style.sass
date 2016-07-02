@@ -1,0 +1,70 @@
+@import "../../../styles/mq"
+
+.resume
+    .entry
+
+        margin-top: 10px
+        display: flex
+
+        .position
+            display: block
+            font-size: 18px
+
+            @include mq($media-type: print)
+                display: inline
+                font-size: 16px
+
+        .location
+            display: block
+
+            @include mq($until: tablet)
+                display: inline
+
+            @include mq($media-type: print)
+                display: inline
+                margin-left: 5px
+
+        .period
+            display: block
+
+            @include mq($until: tablet)
+                display: inline
+
+                &::before
+                    content: ", "
+
+            @include mq($media-type: print)
+                display: inline
+
+                &::before
+                    content: ", "
+
+        .left
+            width: 15%
+
+            @include mq($until: desktop)
+                width: 19%
+
+        .right
+            text-align: justify
+
+        @include mq($until: tablet)
+            .left
+                width: 100%
+                display: block
+
+            .right
+                width: 100%
+                display: block
+
+        @include mq($media-type: print)
+            .left
+                width: 100%
+                display: block
+
+            .right
+                width: 100%
+                display: block
+
+        @include mq($until: tablet)
+            display: block

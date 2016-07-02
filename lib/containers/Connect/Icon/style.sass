@@ -1,0 +1,39 @@
+@import "../../../styles/mq"
+@import "../../../styles/colors"
+
+.connect
+    a.icon
+        display: inline-block
+        margin: 5px
+        padding: 10px
+        border: 1px solid $light-gray
+        border-radius: 5px
+        text-decoration: none
+        color: $font-color
+
+        .fa
+            font-size: 20px
+
+            @include mq($until: mobile)
+                font-size: 14px
+
+            @include mq($media-type: print)
+                font-size: 14px
+
+        &:hover
+            background-color: $font-color
+            color: $white
+
+        @include mq($until: tablet, $media-type: screen)
+            display: block
+            width: 184px
+            min-width: 184px
+            margin: 4px auto
+
+    @include mq($media-type: print)
+        a.print-url::after
+            content: attr(href)
+
+        a.print-url
+            .text
+                display: none

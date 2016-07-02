@@ -1,0 +1,26 @@
+parser: 
+  babel-eslint
+
+settings:
+  ecmascript: 6
+
+ecmaFeatures: 
+  jsx: true
+  modules: true
+  destructuring: true
+  classes: true
+  forOf: true
+  blockBindings: true
+  arrowFunctions: true 
+
+env:
+  es6: true
+  node: true
+  browser: true
+
+rules:
+  indent: 2
+  semi: 2
+  no-undef: 2
+  no-const-assign: 2
+  guard-for-in: 2
